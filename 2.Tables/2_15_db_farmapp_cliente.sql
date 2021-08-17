@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente` (
   `cpf` VARCHAR(20) NULL,
   `celular` VARCHAR(15) NULL,
   `login` VARCHAR(50) NULL,
+  `senha` VARCHAR(50) NOT NULL,
   `clientecol` VARCHAR(45) NULL,
   `conta_idconta` INT NOT NULL,
   `consentimento_idconsentimento` INT NOT NULL,
@@ -23,8 +24,8 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_cliente_consentimento1`
-    FOREIGN KEY (`consentimento_idconsentimento`)
-    REFERENCES `db_farmapp`.`consentimento` (`idconsentimento`)
+    FOREIGN KEY (`idcliente`,`consentimento_idconsentimento`)
+    REFERENCES `db_farmapp`.`cliente_consentimento` (`idcliente`,`idconsentimento`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
