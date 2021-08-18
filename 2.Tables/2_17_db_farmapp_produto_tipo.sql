@@ -4,10 +4,10 @@
 USE `db_farmapp` ;
 
 -- -----------------------------------------------------
--- Table `db_farmapp`.`marca`
+-- Table `db_farmapp`.`produto_tipo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_farmapp`.`marca` (
-  `idmarca` INT NOT NULL,
-  `nome_marca` VARCHAR(50) NULL,
-  PRIMARY KEY (`idmarca`))
+CREATE TABLE IF NOT EXISTS `db_farmapp`.`produto_tipo` (
+  `id` INT NOT NULL,
+  `descricao_tipo_produto` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;

@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Insert into table `db_farmapp`.`cidade`
 -- -----------------------------------------------------
 DELETE FROM `db_farmapp`.`cidade`;
-INSERT INTO `db_farmapp`.`cidade` (`idcidade`, `nome_cidade`, `uf_iduf`) VALUES
+INSERT INTO `db_farmapp`.`cidade` (`id`, `nome_cidade`, `iduf`) VALUES
 (1, 'Afonso Cláudio', 8),
 (2, 'Água Doce do Norte', 8),
 (3, 'Águia Branca', 8),
@@ -2075,7 +2075,7 @@ INSERT INTO `db_farmapp`.`cidade` (`idcidade`, `nome_cidade`, `uf_iduf`) VALUES
 (2065, 'Montes Claros', 11),
 (2066, 'Montezuma', 11),
 (2067, 'Morada Nova de Minas', 11);
-INSERT INTO `db_farmapp`.`cidade` (`idcidade`, `nome_cidade`, `uf_iduf`) VALUES
+INSERT INTO `db_farmapp`.`cidade` (`id`, `nome_cidade`, `iduf`) VALUES
 (2068, 'Morro da Garça', 11),
 (2069, 'Morro do Pilar', 11),
 (2070, 'Munhoz', 11),
@@ -3985,7 +3985,7 @@ INSERT INTO `db_farmapp`.`cidade` (`idcidade`, `nome_cidade`, `uf_iduf`) VALUES
 (3974, 'Cruz Alta', 23),
 (3975, 'Cruzaltense', 23),
 (3976, 'Cruzeiro do Sul', 23);
-INSERT INTO `db_farmapp`.`cidade` (`idcidade`, `nome_cidade`, `uf_iduf`) VALUES
+INSERT INTO `db_farmapp`.`cidade` (`id`, `nome_cidade`, `iduf`) VALUES
 (3977, 'David Canabarro', 23),
 (3978, 'Derrubadas', 23),
 (3979, 'Dezesseis de Novembro', 23),

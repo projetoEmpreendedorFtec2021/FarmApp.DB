@@ -7,9 +7,9 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`consentimento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`consentimento` (
-  `idconsentimento` INT NOT NULL,
+  `id` INT NOT NULL,
   `finalidade` VARCHAR(100) NULL,
   `situacao` VARCHAR(20) NULL,
   `data` DATETIME NULL,
-  PRIMARY KEY (`idconsentimento`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;

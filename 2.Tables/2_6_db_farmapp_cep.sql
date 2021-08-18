@@ -7,14 +7,14 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`cep`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`cep` (
-  `idcep` INT NOT NULL,
+  `id` INT NOT NULL,
   `numero_cep` VARCHAR(12) NULL,
-  `endereco_idendereco` INT NOT NULL,
-  PRIMARY KEY (`idcep`),
-  INDEX `fk_cep_endereco1_idx` (`endereco_idendereco` ASC),
+  `idendereco` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_cep_endereco1_idx` (`idendereco` ASC),
   CONSTRAINT `fk_cep_endereco1`
-    FOREIGN KEY (`endereco_idendereco`)
-    REFERENCES `db_farmapp`.`endereco` (`idendereco`)
+    FOREIGN KEY (`idendereco`)
+    REFERENCES `db_farmapp`.`endereco` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

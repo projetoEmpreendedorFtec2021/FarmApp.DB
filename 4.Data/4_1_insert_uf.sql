@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Insert into table `db_farmapp`.`uf`
 -- -----------------------------------------------------
 DELETE FROM `db_farmapp`.`uf`;
-INSERT INTO `db_farmapp`.`uf` (`iduf`, `nome_uf`) VALUES
+INSERT INTO `db_farmapp`.`uf` (`id`, `nome_uf`) VALUES
 (1, 'Acre'),
 (2, 'Alagoas'),
 (3, 'Amazonas'),
