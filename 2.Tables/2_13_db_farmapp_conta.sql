@@ -11,12 +11,10 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`conta` (
   `data_criacao` VARCHAR(45) NULL,
   `data_encerramento` VARCHAR(45) NULL,
   `idconta_pessoal` INT NOT NULL,
-  `idconta_farmacia` INT NOT NULL,
-  `idmensagem_sistema` INT NOT NULL,
+  `idconta_farmacia` INT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_conta_conta_pessoal_idx` (`idconta_pessoal` ASC),
   INDEX `fk_conta_conta_farmacia1_idx` (`idconta_farmacia` ASC),
-  INDEX `fk_conta_mensagem_sistema1_idx` (`idmensagem_sistema` ASC),
   CONSTRAINT `fk_conta_conta_pessoal`
     FOREIGN KEY (`idconta_pessoal`)
     REFERENCES `db_farmapp`.`conta_pessoal` (`id`)
@@ -25,11 +23,6 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`conta` (
   CONSTRAINT `fk_conta_conta_farmacia1`
     FOREIGN KEY (`idconta_farmacia`)
     REFERENCES `db_farmapp`.`conta_farmacia` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_conta_mensagem_sistema1`
-    FOREIGN KEY (`idmensagem_sistema`)
-    REFERENCES `db_farmapp`.`mensagem_sistema` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

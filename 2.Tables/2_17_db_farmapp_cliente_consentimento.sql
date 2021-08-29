@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente_consentimento` (
   `id` INT NOT NULL,
   `idcliente` INT NOT NULL,
   `idconsentimento` INT NOT NULL,
+  `data` DATETIME NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente1_idx` (`idcliente` ASC),
   INDEX `fk_consentimento1_idx` (`idconsentimento` ASC),

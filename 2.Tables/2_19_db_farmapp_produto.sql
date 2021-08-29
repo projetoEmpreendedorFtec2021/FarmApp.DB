@@ -9,6 +9,7 @@ USE `db_farmapp` ;
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`produto` (
   `id` INT NOT NULL,
   `idproduto_tipo` INT NOT NULL,
+  `descricao_produto` VARCHAR(255);
   PRIMARY KEY (`id`),
   INDEX `fk_produto_produto_tipo1_idx` (`idproduto_tipo` ASC),
   CONSTRAINT `fk_produto_produto_tipo1`
