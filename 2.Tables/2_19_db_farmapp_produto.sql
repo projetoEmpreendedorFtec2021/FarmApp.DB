@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`produto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`produto` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `idproduto_tipo` INT NOT NULL,
   `descricao_produto` VARCHAR(255);
   PRIMARY KEY (`id`),

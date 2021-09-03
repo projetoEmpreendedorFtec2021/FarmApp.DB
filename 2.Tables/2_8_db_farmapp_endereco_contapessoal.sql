@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`endereco_contapessoal`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`endereco_contapessoal` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `idtipo_endereco` INT NOT NULL,
   `idcep` INT NOT NULL,
   `numero` VARCHAR(10) NULL,

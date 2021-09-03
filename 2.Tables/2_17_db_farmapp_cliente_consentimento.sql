@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`cliente_consentimento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente_consentimento` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `idcliente` INT NOT NULL,
   `idconsentimento` INT NOT NULL,
   `data` DATETIME NULL,
