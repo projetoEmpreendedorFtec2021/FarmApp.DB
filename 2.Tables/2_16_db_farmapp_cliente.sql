@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente` (
   `login` VARCHAR(50) NULL,
   `senha` VARCHAR(50) NOT NULL,
   `nome` VARCHAR(45) NULL,
+  `data_nascimento` DATE NULL,
   `idconta` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_conta1_idx` (`idconta` ASC),
