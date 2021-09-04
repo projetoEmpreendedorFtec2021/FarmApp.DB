@@ -11,5 +11,12 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`consentimento` (
   `finalidade` VARCHAR(1000) NULL,
   `situacao` VARCHAR(20) NULL,
   `data` DATETIME NULL,
-  PRIMARY KEY (`id`))
+  `idcliente` INT NOT NULL,
+  PRIMARY KEY (`id`)
+  INDEX `fk_cliente1_idx` (`idcliente` ASC),
+  CONSTRAINT `fk_cliente1`
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `db_farmapp`.`cliente` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
