@@ -7,17 +7,17 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`cliente`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `cpf` VARCHAR(20) NULL,
   `celular` VARCHAR(15) NULL,
   `login` VARCHAR(50) NULL,
   `senha` VARCHAR(50) NOT NULL,
-  `clientecol` VARCHAR(45) NULL,
+  `nome` VARCHAR(45) NULL,
+  `data_nascimento` DATE NULL,
   `idconta` INT NOT NULL,
-  `idconsentimento` INT NOT NULL,
+  `valida_email` TINYINT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_conta1_idx` (`idconta` ASC),
-  INDEX `fk_cliente_consentimento1_idx` (`idconsentimento` ASC),
   CONSTRAINT `fk_cliente_conta1`
     FOREIGN KEY (`idconta`)
     REFERENCES `db_farmapp`.`conta` (`id`)

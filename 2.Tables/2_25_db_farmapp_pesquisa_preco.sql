@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`pesquisa_preco`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`pesquisa_preco` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `idcliente` INT NOT NULL,
   `iditem_cliente` INT NOT NULL,
   `data_hora` DATETIME NULL,

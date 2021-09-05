@@ -4,12 +4,10 @@
 USE `db_farmapp` ;
 
 -- -----------------------------------------------------
--- Table `db_farmapp`.`consentimento`
+-- Table `db_farmapp`.`motivo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_farmapp`.`consentimento` (
-  `id` INT NOT NULL,
-  `finalidade` VARCHAR(100) NULL,
-  `situacao` VARCHAR(20) NULL,
-  `data` DATETIME NULL,
+CREATE TABLE IF NOT EXISTS `db_farmapp`.`motivo` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;

@@ -7,7 +7,7 @@ USE `db_farmapp` ;
 -- Table `db_farmapp`.`conta_farmacia`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_farmapp`.`conta_farmacia` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `razao_social` VARCHAR(100) NULL,
   `cnpj` VARCHAR(20) NULL,
   `nome_fantasia` VARCHAR(100) NULL,

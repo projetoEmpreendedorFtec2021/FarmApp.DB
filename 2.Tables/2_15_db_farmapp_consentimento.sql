@@ -4,20 +4,16 @@
 USE `db_farmapp` ;
 
 -- -----------------------------------------------------
--- Table `db_farmapp`.`cliente_consentimento`
+-- Table `db_farmapp`.`consentimento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente_consentimento` (
-  `id` INT NOT NULL,
+CREATE TABLE IF NOT EXISTS `db_farmapp`.`consentimento` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `finalidade` VARCHAR(1000) NULL,
+  `situacao` VARCHAR(20) NULL,
+  `data` DATETIME NULL,
   `idcliente` INT NOT NULL,
-  `idconsentimento` INT NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`)
   INDEX `fk_cliente1_idx` (`idcliente` ASC),
-  INDEX `fk_consentimento1_idx` (`idconsentimento` ASC),
-  CONSTRAINT `fk_consentimento1`
-    FOREIGN KEY (`idconsentimento`)
-    REFERENCES `db_farmapp`.`consentimento` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_cliente1`
     FOREIGN KEY (`idcliente`)
     REFERENCES `db_farmapp`.`cliente` (`id`)
