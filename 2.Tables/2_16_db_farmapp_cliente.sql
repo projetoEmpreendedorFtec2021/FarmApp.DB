@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `db_farmapp`.`cliente` (
   `nome` VARCHAR(45) NULL,
   `data_nascimento` DATE NULL,
   `idconta` INT NOT NULL,
+  `valida_email` TINYINT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_conta1_idx` (`idconta` ASC),
   CONSTRAINT `fk_cliente_conta1`
